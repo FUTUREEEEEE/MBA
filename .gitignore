@@ -1,0 +1,18 @@
+*.pyc
+.DS_Store
+raw_data/
+processed_data/
+predictions/
+data/
+outputs/
+instantiated_configs/
+# official_evaluation/
+official_evaluation_/
+case_study/
+cache/
+.history
+.temp
+__pycache__/
+elasticsearch-7.10.2/
+elasticsearch-7.10.2-linux-x86_64.tar.gz
+elasticsearch-7.10.2-linux-x86_64.tar.gz.sha512
