@@ -1,4 +1,4 @@
-### The results of using T5-Large for the as MAB query endoder are as follows:
+### The results of using T5-Large as our MBA query encoder are as follows:
 **Table 1: Performance on FLAN-T5-XL (3B) as the LLM (generation model)**
 Method               | Exact Match (EM) | F1 Score | Accuracy (%) | Avg Steps
 ---------------------|------------------|----------|--------------|-----------
