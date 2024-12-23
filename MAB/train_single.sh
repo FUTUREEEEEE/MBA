@@ -22,7 +22,7 @@ now=$(date +"%Y-%m-%d-%H-%M-%S")
 echo $now
 exp_name=test
 
-python3 train_mab_mo_single.py \
+python3 train_mab_single.py \
     --exp_name test \
     --now $now \
     --lr $lrs\
