@@ -324,8 +324,8 @@ def one_experiment(args):
 
     assert args.debug, "should run in debug mode"
     
-    if args.generate_model_type == 't5-xl':
-        train_set = read_json('data/train.json')
+    
+    train_set = read_json('train.json')
 
 
 
@@ -339,13 +339,13 @@ def one_experiment(args):
     
     losses, rewards, action_probas, weight_changes = train_network(env, model,tokenizer,args)
     
-    test_set = read_json('data/valid.json')
+    test_set = read_json('valid.json')
     env = Environment(arms=args.num_arms,dataset=test_set,args=args)
     
     test_rewards,test_actions,test_delays = test_network(env, model,tokenizer,args)
     print(f"Test Reward : {np.mean(test_rewards)}")
 
-    pred_set = read_json('data/predict.json')
+    pred_set = read_json('predict.json')
     
     env = Environment(arms=args.num_arms,dataset=pred_set,args=args,preding=True)
 
