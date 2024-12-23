@@ -12,7 +12,7 @@ Our method achieves new state of the art results on multiple single-hop and mult
 On the left, the AdaptiveRAG pipeline relies on an inaccurate heuristic approach to assign queries of different complexities to a single generation process. On the right, we propose an MBA-RAG framework that allows the model to explore the merits of different generation methods and rewards it based on fine-grained assessments of generation quality and cost.
 
 ## Datasets
-* You can download multi-hop datasets (MuSiQue, HotpotQA, and 2WikiMultiHopQA) from https://github.com/StonyBrookNLP/ircot.
+* You can download multi-hop datasets (MuSiQue, HotpotQA, and 2WikiMultiHopQA) from https://github.com/StonyBrookNLP/ircot. And follow the process instruction on [AdaptiveRAG](https://github.com/starsuzi/Adaptive-RAG)
 ```bash
 # Download the preprocessed datasets for the test set.
 $ bash ./download/processed_data.sh
@@ -22,6 +22,9 @@ $ python processing_scripts/subsample_dataset_and_remap_paras.py musique dev_dif
 $ python processing_scripts/subsample_dataset_and_remap_paras.py hotpotqa dev_diff_size 500
 $ python processing_scripts/subsample_dataset_and_remap_paras.py 2wikimultihopqa dev_diff_size 500
 ```
+
+* Alternatively, you can download our pre-processed dataset from https://drive.google.com/drive/folders/1WFVxMOFpSvmJ0zxU5lyTjdebhERjRPNY?usp=sharing and place data into MAB folder.
+
 
 ## Train and evaluate Multi-arm bandit for MBA-RAG
 
